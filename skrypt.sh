@@ -8,3 +8,9 @@ if [[ "$1" == "--logs" ]]; then
     echo -e "log$i\n$0\n$(date)" > log$i.txt
   done
 fi
+if [[ "$1" == "--help" ]]; then
+  echo "Dostępne opcje:"
+  echo "--date - wyświetla dzisiejszą datę"
+  echo "--logs [n] - tworzy n plików logx.txt (domyślnie 100)"
+  echo "--help - wyświetla dostępne opcje"
+fi
