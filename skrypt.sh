@@ -29,3 +29,7 @@ if [[ "$1" == "--help" || "$1" == "-h" ]]; then
   echo "--logs [n], -l [n] - tworzy n plików logx.txt (domyślnie 100)"
   echo "--help, -h - wyświetla dostępne opcje"
 fi
+if [[ "$1" == "--init" ]]; then
+  git clone https://github.com/<twoje-konto>/<nazwa-repozytorium>.git
+  export PATH=$PATH:$(pwd)/<nazwa-repozytorium>
+fi
