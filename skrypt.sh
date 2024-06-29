@@ -33,3 +33,10 @@ if [[ "$1" == "--init" ]]; then
   git clone https://github.com/<twoje-konto>/<nazwa-repozytorium>.git
   export PATH=$PATH:$(pwd)/<nazwa-repozytorium>
 fi
+if [[ "$1" == "--error" || "$1" == "-e" ]]; then
+  num_files=${2:-100}
+  mkdir -p error
+  for i in $(seq 1 $num_files); do
+    echo -e "error$i\n$0\n$(date)" > error/error$i.txt
+  done
+fi
