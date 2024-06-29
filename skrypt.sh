@@ -40,3 +40,11 @@ if [[ "$1" == "--error" || "$1" == "-e" ]]; then
     echo -e "error$i\n$0\n$(date)" > error/error$i.txt
   done
 fi
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+  echo "Dostępne opcje:"
+  echo "--date, -d - wyświetla dzisiejszą datę"
+  echo "--logs [n], -l [n] - tworzy n plików logx.txt (domyślnie 100)"
+  echo "--help, -h - wyświetla dostępne opcje"
+  echo "--init - klonuje repozytorium i dodaje do PATH"
+  echo "--error [n], -e [n] - tworzy n plików errorx/errorx.txt (domyślnie 100)"
+fi
